@@ -3,8 +3,16 @@
 import sys
 
 sum = 0
+comment = ""
+
+t = 1
 
 for i in sys.argv[1:]:
-	sum +=  float(i)
+    if t < len(sys.argv)-1:
+        comment += i + "+"
+    else:
+        comment += i + "="
+    sum +=  float(i)
+    t += 1
 
-print(sum)	
+print(comment,sum)
